@@ -21,11 +21,11 @@ or alternatively using `brew install fastlane`
 fastlane ios unit_test
 ```
 Run Unit Tests for the Warcraft SDK
-### ios list_devices
+### ios build_release
 ```
-fastlane ios list_devices
+fastlane ios build_release
 ```
-List available devices
+Build XCFramework
 
 ----
 

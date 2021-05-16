@@ -10,8 +10,28 @@ platform :ios do
             scheme: "WarcraftTests")
   end
 
-  desc "List available devices"
-  lane :list_devices do
-    sh("xcrun simctl list devices")
-   end
+  desc "Build XCFramework"
+  lane :build_release do |options|
+    build()
+    zip_release(options)
+  end
+
+  desc "Build XCFramework"
+  private_lane :build do
+    create_xcframework(
+      workspace: 'Warcraft.xcworkspace',
+      scheme: 'Warcraft',
+      destinations: ['iOS', 'maccatalyst'],
+      xcframework_output_directory: 'Artifacts/',
+      remove_xcarchives: true,
+    )
+  end
+
+  desc "Zip Artifacts for Release"
+  private_lane :zip_release do |options|
+    zip(path: "Artifacts/#{options[:product_name]}.BCSymbolMaps", output_path: "Artifacts/#{options[:product_name]}.BCSymbolMaps.zip")
+    zip(path: "Artifacts/#{options[:product_name]}.dSYMs", output_path: "Artifacts/#{options[:product_name]}.dSYMs.zip")
+    zip(path: "Artifacts/#{options[:product_name]}.xcframework", output_path: "Artifacts/#{options[:product_name]}.BCSymbolMaps.zip")
+  end
+
 end

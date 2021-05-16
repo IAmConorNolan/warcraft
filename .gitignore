@@ -5,7 +5,7 @@
 build/
 DerivedData/
 Index/
-xcuserdata/
+*/xcuserdata/
 ExternalDependencies/
 Artifacts
 
