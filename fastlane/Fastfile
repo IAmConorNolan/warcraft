@@ -31,7 +31,7 @@ platform :ios do
   private_lane :zip_release do |options|
     zip(path: "Artifacts/#{options[:product_name]}.BCSymbolMaps", output_path: "Artifacts/#{options[:product_name]}.BCSymbolMaps.zip")
     zip(path: "Artifacts/#{options[:product_name]}.dSYMs", output_path: "Artifacts/#{options[:product_name]}.dSYMs.zip")
-    zip(path: "Artifacts/#{options[:product_name]}.xcframework", output_path: "Artifacts/#{options[:product_name]}.BCSymbolMaps.zip")
+    zip(path: "Artifacts/#{options[:product_name]}.xcframework", output_path: "Artifacts/#{options[:product_name]}.xcframework.zip")
   end
 
 end
