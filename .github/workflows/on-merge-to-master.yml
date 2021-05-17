@@ -3,11 +3,11 @@ name: Releases
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
 
@@ -22,8 +22,8 @@ jobs:
       - name: Extract Version from XCConfig
         run: scripts/sdk_versions.sh
 
-      # - uses: ncipollo/release-action@v1
-      #   with:
-      #     artifacts: "Artifacts/*.zip"
-      #     bodyFile: "Artifacts/changes.md"
-      #     token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "Artifacts/*.zip"
+          bodyFile: "Artifacts/changes.md"
+          token: ${{ secrets.GITHUB_TOKEN }}
