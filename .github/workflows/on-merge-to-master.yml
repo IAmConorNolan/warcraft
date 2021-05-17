@@ -16,11 +16,11 @@ jobs:
           ruby-version: 2.6.3
           bundler-cache: true
 
-      - name: Build for Release
-        run: bundle exec fastlane build_release product_name:Warcraft
-
       - name: Extract Version from XCConfig
         run: scripts/sdk_versions.sh
+
+      - name: Build for Release
+        run: bundle exec fastlane build_release product_name:Warcraft
 
       - uses: ncipollo/release-action@v1
         with:
