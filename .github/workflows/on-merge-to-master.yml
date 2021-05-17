@@ -27,4 +27,4 @@ jobs:
           artifacts: "Artifacts/*.zip"
           bodyFile: "changelog/v0.0.1.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: $WARCRAFT_VERSION_NUMBER
+          tag: ${{ env.WARCRAFT_VERSION_NUMBER }}
