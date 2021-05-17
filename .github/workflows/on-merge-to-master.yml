@@ -17,7 +17,7 @@ jobs:
           bundler-cache: true
 
       - name: Build for Release
-        run: bundle exec fastlane build_release
+        run: bundle exec fastlane build_release product_name:Warcraft
 
       - name: Extract Version from XCConfig
         run: scripts/sdk_versions.sh
