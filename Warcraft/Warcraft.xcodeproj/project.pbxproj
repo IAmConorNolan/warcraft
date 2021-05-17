@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32296322652D5400036B9ED /* Warcraft.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D32296312652D5400036B9ED /* Warcraft.xcconfig */; };
 		D35C16D62651356700D6EC6C /* Warcraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35C16CC2651356700D6EC6C /* Warcraft.framework */; };
 		D35C16DB2651356700D6EC6C /* WarcraftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C16DA2651356700D6EC6C /* WarcraftTests.swift */; };
 		D35C16DD2651356700D6EC6C /* Warcraft.h in Headers */ = {isa = PBXBuildFile; fileRef = D35C16CF2651356700D6EC6C /* Warcraft.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D32296312652D5400036B9ED /* Warcraft.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Warcraft.xcconfig; path = ../../Warcraft.xcconfig; sourceTree = "<group>"; };
 		D35C16CC2651356700D6EC6C /* Warcraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Warcraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35C16CF2651356700D6EC6C /* Warcraft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Warcraft.h; sourceTree = "<group>"; };
 		D35C16D02651356700D6EC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				D35C16CF2651356700D6EC6C /* Warcraft.h */,
 				D35C16D02651356700D6EC6C /* Info.plist */,
 				D35C17332651387600D6EC6C /* Warcraft.swift */,
+				D32296312652D5400036B9ED /* Warcraft.xcconfig */,
 			);
 			path = Warcraft;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32296322652D5400036B9ED /* Warcraft.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

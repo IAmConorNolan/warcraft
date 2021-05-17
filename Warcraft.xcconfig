@@ -1,0 +1,20 @@
+//
+//  Warcraft.xcconfig
+//  Warcraft
+//
+//  Created by Conor Nolan on 17/05/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+WARCRAFT_VERSION_NUMBER=0.0.1
+
+// Deployment target
+IPHONEOS_DEPLOYMENT_TARGET= 13.0
+
+// Supported Swift version
+SWIFT_VERSION=5.3
+
+// Library evolution
+BUILD_LIBRARY_FOR_DISTRIBUTION=YES

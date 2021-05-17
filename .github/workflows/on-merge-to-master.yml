@@ -1,0 +1,29 @@
+name: Releases
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.3
+          bundler-cache: true
+
+      - name: Build for Release
+        run: bundle exec fastlane build_release
+
+      - name: Extract Version from XCConfig
+        run: scripts/sdk_versions.sh
+
+      # - uses: ncipollo/release-action@v1
+      #   with:
+      #     artifacts: "Artifacts/*.zip"
+      #     bodyFile: "Artifacts/changes.md"
+      #     token: ${{ secrets.GITHUB_TOKEN }}
